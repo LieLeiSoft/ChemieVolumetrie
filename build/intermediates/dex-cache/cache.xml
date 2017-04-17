@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\Benutzer\Eagle\Android\AndroidStudioProjects\ChemieVolumetrie\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7c04535ef5d396afe56df3f9dbc9fcc4d19afad5">
+        <dex dex="D:\Benutzer\Eagle\Android\AndroidStudioProjects\ChemieVolumetrie\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_ae2a1642f7a0d00ab18038450577d0441cbedcc2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Benutzer\Eagle\Android\AndroidStudioProjects\ChemieVolumetrie\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="D:\Benutzer\Eagle\Android\AndroidStudioProjects\ChemieVolumetrie\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_25d176440b931b90a3bca76e79ba8a92aec3dfb0\classes.dex" />
+    </item>
+
+</items>

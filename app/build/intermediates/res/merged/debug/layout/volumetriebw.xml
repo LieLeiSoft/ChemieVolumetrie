@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hintergrund"
+    android:gravity="center|center_horizontal|start|top" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+             <Button
+                 android:id="@+id/btnTitrationsart"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textAllCaps="false"
+                 android:minEms="6"
+                 android:onClick="btnClear"
+                 android:text="@string/Clear" />
+
+             <Button
+                 android:id="@+id/btnWeiter"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textAllCaps="false"
+                 android:layout_alignParentEnd="true"
+                 android:layout_alignParentTop="true"
+                 android:minEms="6"
+                 android:onClick="btnWeiter"
+                 android:text="@string/WeiterProben" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cDunkelblau"
+        android:gravity="center_vertical|center_horizontal"
+        android:minEms="50"
+        android:text="@string/Titrieren_der_Blindwerte"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/cHellorange"
+        android:textColorHint="@color/cHellorange" />
+            
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/VBBW1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvVBBW1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:text="@string/Verbrauch_1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/BW_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/BW_2"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VBBW2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvVBBW2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:text="@string/Verbrauch_2"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/BW_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/BW_3"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VBBW3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvVBBW3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:text="@string/Verbrauch_3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/BW_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/BW_4"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VBBW4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvVBBW4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:text="@string/Verbrauch_4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/BW_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/BW_5"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VBBW5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvVBBW5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:text="@string/Verbrauch_5"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/BW_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/BW_6"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VBBW6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvVBBW6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:text="@string/Verbrauch_6"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/BW_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/BW_7"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VBBW7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvVBBW7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:text="@string/Verbrauch_7"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/BW_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/BW_8"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VBBW8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvVBBW8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:text="@string/Verbrauch_8"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/BW_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/BW_1"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="invisible" >
+
+                <requestFocus />
+            </EditText>
+
+        </TableRow>
+
+    </TableLayout>
+
+</TableLayout>

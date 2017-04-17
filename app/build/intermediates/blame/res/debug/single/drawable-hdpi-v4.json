@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\hintergrund.jpg",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\hintergrund.jpg"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\analysenwaage.jpg",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\analysenwaage.jpg"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\massloesungen.jpg",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\massloesungen.jpg"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\erste_hilfe.jpg",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\erste_hilfe.jpg"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vorlage.jpg",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\vorlage.jpg"
+    }
+]

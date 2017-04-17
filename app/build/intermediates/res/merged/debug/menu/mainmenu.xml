@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+<item android:id="@+id/menu_Impressum" 
+    android:icon="@drawable/icon_impressum" 
+   android:title="@string/Impressum" />
+
+<item android:id="@+id/menu_Hilfe" 
+    android:icon="@drawable/icon_hilfe" 
+   android:title="@string/Beschriftung_Hilfe" />
+
+<item android:id="@+id/menu_Einstellungen" 
+    android:icon="@drawable/icon_einstellungen" 
+    android:title="@string/Beschriftung_Einstellungen" />
+
+<item android:id="@+id/menu_Menue" 
+    android:icon="@drawable/icon_home" 
+    android:title="@string/Menue" />
+
+<item android:id="@+id/menu_Aus" 
+    android:icon="@drawable/icon_aus" 
+   android:title="@string/Beschriftung_ExitApp" />
+</menu>

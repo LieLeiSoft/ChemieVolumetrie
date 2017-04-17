@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_impressum.png",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\icon_impressum.png"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\titration.png",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\titration.png"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_android.png",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\icon_android.png"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_hilfe.png",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\icon_hilfe.png"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_aus.png",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\icon_aus.png"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_help.png",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\icon_help.png"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_home.png",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\icon_home.png"
+    },
+    {
+        "merged": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\icon_einstellungen.png",
+        "source": "D:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\src\\main\\res\\drawable-hdpi\\icon_einstellungen.png"
+    }
+]
