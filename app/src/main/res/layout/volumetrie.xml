@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hintergrund"
+    android:gravity="center|center_horizontal|start|top" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnTitrationsart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:minEms="6"
+            android:onClick="btnClear"
+            android:text="@string/Clear" />
+
+        <Button
+            android:id="@+id/btnBerechnung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnTitrationsart"
+            android:minEms="6"
+            android:onClick="btnBerechnung"
+            android:text="@string/Berechnung" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnBlindwerte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:minEms="6"
+            android:onClick="btnBlindwerte"
+            android:text="@string/Beschriftung_BW" />
+
+        <Button
+            android:id="@+id/btnVorlage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:minWidth="10dp"
+            android:onClick="btnVorlage"
+            android:text="@string/Beschriftung_Vorlage" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cDunkelblau"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/Beschriftung_Volumetrie"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cHellorange"
+                android:textColorHint="@color/cHellorange" />
+
+            <TextView
+                android:id="@+id/tvDBW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cDunkelblau"
+                android:gravity="start|center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cHellorange"
+                android:textColorHint="@color/cHellorange" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvTitrationsart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cDunkelblau"
+                android:gravity="start|center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cHellorange"
+                android:textColorHint="@color/cHellorange" />
+
+            <TextView
+                android:id="@+id/tvVorlage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cDunkelblau"
+                android:gravity="start|center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cHellorange"
+                android:textColorHint="@color/cHellorange" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/VB1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvVB1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Verbrauch_1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/Verbrauch_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:minEms="10"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Verbrauch_2"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvVB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Verbrauch_2"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/Verbrauch_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Verbrauch_3"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="visible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VB3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvVB3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Verbrauch_3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/Verbrauch_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Verbrauch_4"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="visible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VB4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvVB4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Verbrauch_4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/Verbrauch_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Verbrauch_5"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="visible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VB5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             >
+
+            <TextView
+                android:id="@+id/tvVB5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Verbrauch_5"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/Verbrauch_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Verbrauch_6"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="visible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VB6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvVB6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Verbrauch_6"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/Verbrauch_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Verbrauch_7"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="visible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VB7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvVB7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Verbrauch_7"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/Verbrauch_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Verbrauch_8"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="visible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/VB8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvVB8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Verbrauch_8"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau" />
+
+            <EditText
+                android:id="@+id/Verbrauch_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ellipsize="start"
+                android:gravity="start"
+                android:hint="@string/Milliliter"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/btnBerechnung"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHimmelblau"
+                android:visibility="visible" >
+
+                <requestFocus />
+            </EditText>
+
+        </TableRow>
+
+    </TableLayout>
+
+</TableLayout>

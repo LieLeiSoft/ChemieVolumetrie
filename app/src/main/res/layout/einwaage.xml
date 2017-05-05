@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/analysenwaage"
+    tools:context=".EinwaageActivity" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:minEms="6"
+            android:onClick="btnClear"
+            android:text="@string/Clear" />
+
+        <Button
+            android:id="@+id/btnWeiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:minEms="6"
+            android:onClick="btnWeiter"
+            android:text="@string/Weiter" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cDunkelblau"
+            android:gravity="center"
+            android:minEms="50"
+            android:text="@string/Beschriftung_Einwage"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/cHellorange"
+            android:textColorHint="@color/cHellorange" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="281dp"
+        android:gravity="center_horizontal" >
+
+        <TableRow
+            android:id="@+id/Urtiter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvUrtiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="center"
+                android:minEms="5"
+                android:text="@string/Gehalt_Urtiter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cBlau"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/Einwaage_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="start"
+                android:hint="@string/Prozent"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Einwaage_1"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="visible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EW1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvEW1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="5"
+                android:text="@string/Einwaage_1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/Einwaage_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="@string/Gramm"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/Einwaage_2"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EW2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvEW2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="5"
+                android:text="@string/Einwaage_2"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cBlau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/Einwaage_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:labelFor="@id/Einwaage_2"
+                android:nextFocusDown="@+id/Einwaage_3"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="invisible" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EW3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvEW3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Einwaage_3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cBlau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/Einwaage_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:labelFor="@id/Einwaage_3"
+                android:nextFocusDown="@+id/Einwaage_4"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EW4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvEW4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Einwaage_4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cBlau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/Einwaage_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:labelFor="@id/Einwaage_4"
+                android:nextFocusDown="@+id/Einwaage_5"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EW5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvEW5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Einwaage_5"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cBlau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/Einwaage_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:labelFor="@id/Einwaage_5"
+                android:nextFocusDown="@+id/Einwaage_6"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EW6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvEW6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Einwaage_6"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cBlau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/Einwaage_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:labelFor="@id/Einwaage_6"
+                android:nextFocusDown="@+id/Einwaage_7"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EW7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvEW7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Einwaage_7"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cBlau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/Einwaage_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:labelFor="@id/Einwaage_7"
+                android:nextFocusDown="@+id/Einwaage_8"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/EW8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvEW8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:gravity="center"
+                android:minEms="10"
+                android:text="@string/Einwaage_8"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cBlau"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/Einwaage_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/cEingabe"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:labelFor="@id/Einwaage_8"
+                android:nextFocusDown="@+id/Einwaage_9"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@color/cDunkelblau"
+                android:textColorHint="@color/cHellblau"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</TableLayout>
