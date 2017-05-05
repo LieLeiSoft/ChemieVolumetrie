@@ -1,7 +1,0 @@
-#Mon Apr 17 21:18:07 CEST 2017
-base.0=D\:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_ae2a1642f7a0d00ab18038450577d0441cbedcc2
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=D\:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_25d176440b931b90a3bca76e79ba8a92aec3dfb0\\classes.dex
-base.1=D\:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_25d176440b931b90a3bca76e79ba8a92aec3dfb0
-file.0=D\:\\Benutzer\\Eagle\\Android\\AndroidStudioProjects\\ChemieVolumetrie\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_ae2a1642f7a0d00ab18038450577d0441cbedcc2\\classes.dex

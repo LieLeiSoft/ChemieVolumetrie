@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<style name="MySpinnerLook" parent="@android:TextAppearance.Widget.TextView.SpinnerItem">
-		<item name="android:textSize">26sp</item>
-		<item name="android:textColor">@color/cHellblau</item>
-	</style>
-</resources>
