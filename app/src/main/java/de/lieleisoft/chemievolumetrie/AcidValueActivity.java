@@ -15,7 +15,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import de.lieleisoft.chemievolumetrie.R;
 
 public class AcidValueActivity extends Activity {
 	
