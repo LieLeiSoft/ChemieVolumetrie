@@ -24,16 +24,16 @@ public class HauptmenueActivity extends Activity {
         super.onCreate(savedInstanceState);
      	setContentView(R.layout.hauptmenue);	  
      	
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
     }
     
-    /** wird ausgeführt, wenn Activicty angezeigt wird */
+    /** wird ausgefÃ¼hrt, wenn Activicty angezeigt wird */
 	@Override
 	public void onResume() {
 		super.onResume();
 		
-		// bestimmte Einträge aus Konfigurationsdatei ("Preferences") entfernen
+		// bestimmte EintrÃ¤ge aus Konfigurationsdatei ("Preferences") entfernen
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
    		SharedPreferences.Editor prefEditor = prefs.edit();
    		
@@ -50,7 +50,7 @@ public class HauptmenueActivity extends Activity {
 	    	int resId = getResources().getIdentifier("button"+x, "id", getPackageName());
 	        tv = (TextView) findViewById(resId);
 	        
-	        // Höhe der Textview wird über Layout-Parameter eingestellt, weil "tv.setHeight(intButtonhoehe);" scheinbar ab Android 5 NICHT mehr funktioniert :-( 
+	        // HÃ¶he der Textview wird Ã¼ber Layout-Parameter eingestellt, weil "tv.setHeight(intButtonhoehe);" scheinbar ab Android 5 NICHT mehr funktioniert :-( 
 	        LayoutParams params = (LayoutParams) tv.getLayoutParams();
 	        params.height = intButtonhoehe;
 	        tv.setLayoutParams(params);	        
@@ -58,19 +58,19 @@ public class HauptmenueActivity extends Activity {
 	        tv.setTextSize(intTextSize);
 		}
 
-   		// prefs.edit().clear().commit(); // setzt ALLE Werte zurück!
+   		// prefs.edit().clear().commit(); // setzt ALLE Werte zurÃ¼ck!
    		
    		String strKeyName;
    		
    		// alle Parameter in eine String-Liste schreiben
    		Map<String,?> keys = prefs.getAll();
 
-   		// String-Liste Eintrag für Eintrag durchgehen
+   		// String-Liste Eintrag fÃ¼r Eintrag durchgehen
    		for(Map.Entry<String,?> entry : keys.entrySet()){
    			strKeyName = entry.getKey();
-   			// prüfen, ob Parameter "NachkommastellenGehalt" oder "NachkommastellenRSD" ist
+   			// prÃ¼fen, ob Parameter "NachkommastellenGehalt" oder "NachkommastellenRSD" ist
    			// (diese Parameter sollen NICHT entfernt werden)
-   			if ("Saeurezahl,NachkommastellenGehalt,NachkommastellenRSD,Einstellungen,TiterFürGehalt,TG_Hauptmenue,BH_Hauptmenue,TG_Fettkennzahlen,BH_Fettkennzahlen,TG_Molmasse,BH_Molmasse".indexOf(strKeyName) == -1) {   				
+   			if ("Saeurezahl,NachkommastellenGehalt,NachkommastellenRSD,Einstellungen,TiterFÃ¼rGehalt,TG_Hauptmenue,BH_Hauptmenue,TG_Fettkennzahlen,BH_Fettkennzahlen,TG_Molmasse,BH_Molmasse".indexOf(strKeyName) == -1) {   				
    				// Parameter entfernen 
    				prefEditor.remove(strKeyName);
    			}
@@ -90,7 +90,7 @@ public class HauptmenueActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -109,7 +109,7 @@ public class HauptmenueActivity extends Activity {
     	
         Intent myIntent = new Intent(v.getContext(), VolumetrieVorlageActivity.class);
 
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -127,7 +127,7 @@ public class HauptmenueActivity extends Activity {
     	
         Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
 
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -138,7 +138,7 @@ public class HauptmenueActivity extends Activity {
     {
     	Intent myIntent = new Intent(v.getContext(), FettkennzahlenActivity.class);
 
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -149,7 +149,7 @@ public class HauptmenueActivity extends Activity {
     {
         Intent myIntent = new Intent(v.getContext(), MolmassenActivity.class);
 
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen

@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class AcidValueActivity extends Activity {
 	
 	/*************************************************************
-	 ** onCreate wird ausgeführt, wenn Activicty erstellt wird ***
+	 ** onCreate wird ausgefÃ¼hrt, wenn Activicty erstellt wird ***
 	 *************************************************************/
 	
 	@Override
@@ -27,7 +27,7 @@ public class AcidValueActivity extends Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.acid_value);       
     
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 
 	    // Cursor in erstes Eingabefeld setzen 
@@ -38,7 +38,7 @@ public class AcidValueActivity extends Activity {
 	} // onCreate
 
 	/***************************************************************
-	 ** onResume wird ausgeführt, wenn Activicty angezeigt wird  ***
+	 ** onResume wird ausgefÃ¼hrt, wenn Activicty angezeigt wird  ***
 	 ***************************************************************/
 	
 	@Override
@@ -68,7 +68,7 @@ public class AcidValueActivity extends Activity {
 	} // onResume
 
 	/*******************************************************************************
-	 ** onPause wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird ***
+	 ** onPause wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird ***
 	 *******************************************************************************/
 	
 	@Override
@@ -107,7 +107,7 @@ public class AcidValueActivity extends Activity {
    			// **************************************       		
    			// *** Hier wird ein Toast ausgegeben ***
    			// **************************************        		
-   			String text = "\n   Die Säurezahl   \n   wurden auf 0 gesetzt!   \n"; 
+   			String text = "\n   Die SÃ¤urezahl   \n   wurden auf 0 gesetzt!   \n"; 
    			Toast Meldung = Toast.makeText(this, text, Toast.LENGTH_LONG);
    			Meldung.setGravity(Gravity.TOP, 0, 0);
    			Meldung.show();
@@ -120,7 +120,7 @@ public class AcidValueActivity extends Activity {
     } // btnWeiter
 	
 
-    // Eingabefelder zurücksetzen
+    // Eingabefelder zurÃ¼cksetzen
     public void btnClear(View v) {
     	
     	EditText et;	      

@@ -17,7 +17,7 @@ public class ActivityTools {
 	   
        Ein Text wird so oft dupliziert, wie im 2. Parameter angegeben
        Beispiel: repeat("ha", 5) 
-                 gibt den Text "hahahahaha" zurück
+                 gibt den Text "hahahahaha" zurÃ¼ck
     
 	   http://rosettacode.org/wiki/Repeat_a_string#Java
 	   Works with: Java version 1.5+
@@ -46,7 +46,7 @@ public class ActivityTools {
 
 	/*
 		Text in Zahl umwandeln
-		Ist der übergebene Text leer, wird 0 zurückgegeben
+		Ist der Ã¼bergebene Text leer, wird 0 zurÃ¼ckgegeben
 	*/
 	public double fktBlankToNumber(String strParameter){
     	double Ergebnis = 0;

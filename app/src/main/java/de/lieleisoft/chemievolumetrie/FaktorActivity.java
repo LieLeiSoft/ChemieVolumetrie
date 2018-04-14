@@ -19,7 +19,7 @@ import de.lieleisoft.chemievolumetrie.R;
 public class FaktorActivity extends Activity {
 	
 	/*************************************************************
-	 ** onCreate wird ausgeführt, wenn Activicty erstellt wird ***
+	 ** onCreate wird ausgefÃ¼hrt, wenn Activicty erstellt wird ***
 	 *************************************************************/
 	
 	@Override
@@ -27,13 +27,13 @@ public class FaktorActivity extends Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.faktorbestimmung);       
     
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 	
 	} // onCreate
 
 	/***************************************************************
-	 ** onResume wird ausgeführt, wenn Activicty angezeigt wird  ***
+	 ** onResume wird ausgefÃ¼hrt, wenn Activicty angezeigt wird  ***
 	 ***************************************************************/
 	
 	@Override
@@ -86,7 +86,7 @@ public class FaktorActivity extends Activity {
 	} // onResume
 
 	/*******************************************************************************
-	 ** onPause wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird ***
+	 ** onPause wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird ***
 	 *******************************************************************************/
 	
 	@Override
@@ -153,8 +153,8 @@ public class FaktorActivity extends Activity {
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(FaktorActivity.this);
 		builder.setTitle("Volumetrischer Faktor aus der Molmasse");
-		builder.setMessage("Achtung! Der Faktor kann nur aus der Molmasse berechnet werden, wenn sicher ist, daß die Molmasse der gesuchten Substanz zu"
-				+ " 100% von der Maßlösung umgesetzt wird!");
+		builder.setMessage("Achtung! Der Faktor kann nur aus der Molmasse berechnet werden, wenn sicher ist, daÃŸ die Molmasse der gesuchten Substanz zu"
+				+ " 100% von der MaÃŸlÃ¶sung umgesetzt wird!");
 		builder.setPositiveButton 
 		(" Faktor berechnen",
 				new DialogInterface.OnClickListener()
@@ -204,7 +204,7 @@ public class FaktorActivity extends Activity {
 	
 	
 	/*******************************************************************************
-	 ******************************* Button Zurück *********************************
+	 ******************************* Button ZurÃ¼ck *********************************
 	 *******************************************************************************/	
 	
 	public void btnZurueck(View v) 
@@ -219,7 +219,7 @@ public class FaktorActivity extends Activity {
 	 **** btn Clear ****
 	 *******************/
     
-    // Eingabefelder zurücksetzen
+    // Eingabefelder zurÃ¼cksetzen
     public void btnClear(View v) 
     {
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());

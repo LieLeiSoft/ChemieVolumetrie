@@ -42,7 +42,7 @@ public class BerechnungActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.berechnung);
 
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 	} // onCreate
 	
@@ -54,7 +54,7 @@ public class BerechnungActivity extends Activity {
 		String strBW;
 		String strVorlage;
 		String strDirekteT;
-		String strRücktitration;
+		String strRÃ¼cktitration;
 		int AnzahlStellen;
 		
        	// Zugang zur Konfigurationsdatei ("Preferences") herstellen
@@ -75,7 +75,7 @@ public class BerechnungActivity extends Activity {
 	    }
    
    		//***********************************************************************
-   		//********* Auslesen der Verbräuche *************************************
+   		//********* Auslesen der VerbrÃ¤uche *************************************
    		//***********************************************************************
    		
 	    for (int x=1; x<=8; x++)
@@ -95,9 +95,9 @@ public class BerechnungActivity extends Activity {
    		//***********************************************************************
    		//********* Auslesen der Eingaben 								*********
    		//********* Eingabe_1 = Volumetrischer Faktor					*********
-   		//********* Eingabe_2 = Molarität der Maßlösung ohne Titer		*********
-   		//********* Eingabe_3 = Titer der Maßlösung mit Titer			*********
-   		//********* Eingabe_4 = Molarität der Maßlösung mit Titer		*********
+   		//********* Eingabe_2 = MolaritÃ¤t der MaÃŸlÃ¶sung ohne Titer		*********
+   		//********* Eingabe_3 = Titer der MaÃŸlÃ¶sung mit Titer			*********
+   		//********* Eingabe_4 = MolaritÃ¤t der MaÃŸlÃ¶sung mit Titer		*********
    		//***********************************************************************
 	    
 	    for (int x=1; x<=4; x++)
@@ -115,7 +115,7 @@ public class BerechnungActivity extends Activity {
 		
 		AnzahlStellen = prefs.getInt("NachkommastellenGehalt", 2);
 		
-		strRücktitration = prefs.getString("Rücktitration","nein");
+		strRÃ¼cktitration = prefs.getString("RÃ¼cktitration","nein");
 		
 		strDirekteT = prefs.getString("DirekteT","ja");
 		
@@ -142,7 +142,7 @@ public class BerechnungActivity extends Activity {
 			// Id wird ermittelt
 			int resId = getResources().getIdentifier("tvGehalt"+x, "id", getPackageName());
 					
-			// Das Feld der Objektvariable wird über die Id gesucht
+			// Das Feld der Objektvariable wird Ã¼ber die Id gesucht
 			TextView tv = (TextView) findViewById(resId);
 			
 			// Leere Felder werden ausgeblendet
@@ -155,10 +155,10 @@ public class BerechnungActivity extends Activity {
 				intAnzahl = intAnzahl + 1;
 				
 				//*************************************											// arrEingabe[1] = Faktor
-				//******** Berechnung as is ***********											// arrEingabe[2] = Molarität der Maßlösung ohne Titer
-				//*************************************											// arrEingabe[3] = Titer der Maßlösung mit Titer
-																								// arrEingabe[4] = Molarität der Maßlösung mit Titer
-				if (strRücktitration == "ja")
+				//******** Berechnung as is ***********											// arrEingabe[2] = MolaritÃ¤t der MaÃŸlÃ¶sung ohne Titer
+				//*************************************											// arrEingabe[3] = Titer der MaÃŸlÃ¶sung mit Titer
+																								// arrEingabe[4] = MolaritÃ¤t der MaÃŸlÃ¶sung mit Titer
+				if (strRÃ¼cktitration == "ja")
 				{
 					if(strDirekteT == "ja")
 					{																
@@ -171,7 +171,7 @@ public class BerechnungActivity extends Activity {
 							arrGehalt[x] = (((dblVorlage - (dblBW - arrVerbrauch[x])) * arrEingabe[3] * arrEingabe[1]) / (arrEinwaage[x] * 10)); // RT+ , DT+ , VL+
 						}
 					}
-					/*  ************ Berechnung noch unvollständig ************
+					/*  ************ Berechnung noch unvollstÃ¤ndig ************
 					
 					else
 					{
@@ -199,7 +199,7 @@ public class BerechnungActivity extends Activity {
 							arrGehalt[x] = (((dblVorlage - (arrVerbrauch[x] - dblBW)) * arrEingabe[3] * arrEingabe[1]) / (arrEinwaage[x] * 10)); // RT- , DT+ , VL+
 						}
 					}
-					/*  ************ Berechnung noch unvollständig ************
+					/*  ************ Berechnung noch unvollstÃ¤ndig ************
 					
 					else
 					{
@@ -216,7 +216,7 @@ public class BerechnungActivity extends Activity {
 				}
 				
 				//***************************************
-				//******** Berechnung Ø as is ***********
+				//******** Berechnung Ã˜ as is ***********
 				//***************************************
 				
 				
@@ -238,17 +238,17 @@ public class BerechnungActivity extends Activity {
 			
 	    } // for (int x=1; x<=8; x++)
 		
-		// Ø Gehalt errechnen
+		// Ã˜ Gehalt errechnen
 		
 		dblGehaltasis = dblGehaltasis / intAnzahl;
 		
-		// Vorbereitung für TS vor dem Runden
+		// Vorbereitung fÃ¼r TS vor dem Runden
 		
 		dblSpeicher = dblGehaltasis;
 		
-		// Anzeige Ø Gehalt
+		// Anzeige Ã˜ Gehalt
 		TextView tv = (TextView) findViewById(R.id.tvGehalt);
-		tv.setText("Ø Gehalt = " + ActivityTools.fktDoubleToStringFormat(dblGehaltasis, AnzahlStellen) + "% as is");
+		tv.setText("Ã˜ Gehalt = " + ActivityTools.fktDoubleToStringFormat(dblGehaltasis, AnzahlStellen) + "% as is");
 		
 		// Berechnung der Relativen Standardabweichung
 
@@ -300,7 +300,7 @@ public class BerechnungActivity extends Activity {
 			// Id wird ermittelt
 			int resId = getResources().getIdentifier("tvGehalt"+x, "id", getPackageName());
 					
-			// Das Feld der Objektvariable wird über die Id gesucht
+			// Das Feld der Objektvariable wird Ã¼ber die Id gesucht
 			TextView tv = (TextView) findViewById(resId);
 			
 			if (arrEinwaage[x] == 0)
@@ -313,9 +313,9 @@ public class BerechnungActivity extends Activity {
 				{
 					tv.setText("Gehalt Pr."+ x +" = " + ActivityTools.fktDoubleToStringFormat(arrGehaltasis[x], AnzahlStellen)+ "% as is");
 					
-					// Ø Gehalt as is
+					// Ã˜ Gehalt as is
 					tv = (TextView) findViewById(R.id.tvGehalt);
-					tv.setText("Ø Gehalt = " + ActivityTools.fktDoubleToStringFormat(dblGehaltasis, AnzahlStellen) + "% as is");
+					tv.setText("Ã˜ Gehalt = " + ActivityTools.fktDoubleToStringFormat(dblGehaltasis, AnzahlStellen) + "% as is");
 				}
 				else
 				{	
@@ -325,13 +325,13 @@ public class BerechnungActivity extends Activity {
 				
 					tv.setText("Gehalt Pr."+ x +" = " + ActivityTools.fktDoubleToStringFormat(arrGehaltTS[x], AnzahlStellen)+ "% TS");													
 				
-					// Ø Gehalt
+					// Ã˜ Gehalt
 					
 					dblGehaltTS = dblSpeicher * 100 / (100 - dblWasser);
 					
-					// Anzeige Ø Gehalt
+					// Anzeige Ã˜ Gehalt
 					tv = (TextView) findViewById(R.id.tvGehalt);
-					tv.setText("Ø Gehalt = " + ActivityTools.fktDoubleToStringFormat(dblGehaltTS, AnzahlStellen) + "% TS");
+					tv.setText("Ã˜ Gehalt = " + ActivityTools.fktDoubleToStringFormat(dblGehaltTS, AnzahlStellen) + "% TS");
 				}								
 			}
 		} // for (int x=1; x<=8; x++)		

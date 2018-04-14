@@ -38,7 +38,7 @@ public class BerechnungTiterActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.berechnungtiter);
 
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 	} // onCreate
 	
@@ -50,7 +50,7 @@ public class BerechnungTiterActivity extends Activity {
 		String strBW;
 		String strVorlage;
 		String strDirekteT;
-		String strRücktitration;
+		String strRÃ¼cktitration;
 		int AnzahlStellen;
 
 		// Werte aus Konfigurationsdatei ("Preferences") auslesen und in Arrays eintragen
@@ -76,12 +76,12 @@ public class BerechnungTiterActivity extends Activity {
    		//***********************************************************************
    		//********* Auslesen der Eingaben 								*********
    		//********* Eingabe_1 = Volumetrischer Faktor					*********
-   		//********* Eingabe_2 = Molarität der Maßlösung ohne Titer		*********
-   		//********* Eingabe_3 = Titer der Maßlösung mit Titer			*********
-   		//********* Eingabe_4 = Molarität der Maßlösung mit Titer		*********
+   		//********* Eingabe_2 = MolaritÃ¤t der MaÃŸlÃ¶sung ohne Titer		*********
+   		//********* Eingabe_3 = Titer der MaÃŸlÃ¶sung mit Titer			*********
+   		//********* Eingabe_4 = MolaritÃ¤t der MaÃŸlÃ¶sung mit Titer		*********
    		//***********************************************************************
    		
-   		for (int x=1; x<=4; x++)      // Titration mit anderer Maßlösung
+   		for (int x=1; x<=4; x++)      // Titration mit anderer MaÃŸlÃ¶sung
    		{
    			strWert = prefs.getString("Eingabe_"+x, "0"); 				
    			
@@ -91,7 +91,7 @@ public class BerechnungTiterActivity extends Activity {
 	    	}
    		}
    		//***********************************************************************
-   		//********* Auslesen der Verbräuche *************************************
+   		//********* Auslesen der VerbrÃ¤uche *************************************
    		//***********************************************************************
    		
 	    for (int x=1; x<=8; x++)
@@ -118,10 +118,10 @@ public class BerechnungTiterActivity extends Activity {
 		AnzahlStellen = prefs.getInt("NachkommastellenGehalt", 2);
 		
    		//***********************************************************************
-   		//********* Auslesen der Rüccktitration *********************************
+   		//********* Auslesen der RÃ¼ccktitration *********************************
    		//***********************************************************************
 		
-		strRücktitration = prefs.getString("Rücktitration","nein");
+		strRÃ¼cktitration = prefs.getString("RÃ¼cktitration","nein");
 		
    		//***********************************************************************
    		//********* Auslesen der Vorlage ****************************************
@@ -169,7 +169,7 @@ public class BerechnungTiterActivity extends Activity {
 			// Id wird ermittelt
 			int resId = getResources().getIdentifier("tvGehalt"+x, "id", getPackageName());
 					
-			// Das Feld der Objektvariable wird über die Id gesucht
+			// Das Feld der Objektvariable wird Ã¼ber die Id gesucht
 			TextView tv = (TextView) findViewById(resId);
 			
 			// Leere Felder werden ausgeblendet
@@ -189,7 +189,7 @@ public class BerechnungTiterActivity extends Activity {
 				
 				if (intRoutineID == 1 )
 				{															
-					if (strRücktitration =="ja")
+					if (strRÃ¼cktitration =="ja")
 					{
 						arrTiter[x] = (arrEinwaage[x] * arrEinwaage[9] * 10) / ((dblBW - arrVerbrauch[x]) * arrEingabe [1]); // ohne Vorlage mit RT
 					}
@@ -200,14 +200,14 @@ public class BerechnungTiterActivity extends Activity {
 				}
 				
 				// ***************************************************
-				// ****** Berechnung Titer mit Maßlösung *************
+				// ****** Berechnung Titer mit MaÃŸlÃ¶sung *************
 				// ***************************************************
 				
 				if (intRoutineID == 2 )
 				{																		// Eingabe_1 = Volumetrischer Faktor
-					if (strRücktitration =="ja")										// 1 Eingabe_2 = Molarität der Maßlösung ohne Titer
-					{																	// 2 Eingabe_3 = Titer der Maßlösung mit Titer
-						if (strDirekteT == "ja")										// 3 Eingabe_4 = Molarität der Maßlösung mit Titer
+					if (strRÃ¼cktitration =="ja")										// 1 Eingabe_2 = MolaritÃ¤t der MaÃŸlÃ¶sung ohne Titer
+					{																	// 2 Eingabe_3 = Titer der MaÃŸlÃ¶sung mit Titer
+						if (strDirekteT == "ja")										// 3 Eingabe_4 = MolaritÃ¤t der MaÃŸlÃ¶sung mit Titer
 						{
 							arrTiter[x] = (dblVorlage * arrEingabe [3] * arrEingabe [4]) / ((dblBW - arrVerbrauch[x]) * arrEingabe [2]);  // Direkte Titration + RT
 						}
@@ -244,15 +244,15 @@ public class BerechnungTiterActivity extends Activity {
 			} // else if (arrEinwaage[x] == 0)
 	    } // for (int x=1; x<=8; x++)
 		
-		// Ø Titer errechnen
+		// Ã˜ Titer errechnen
 		
 		dblTiter = dblTiter / intAnzahl;			
 		dblSpeicher = dblTiter;
 		
-		// Anzeige Ø Titer
+		// Anzeige Ã˜ Titer
 		TextView tv = (TextView) findViewById(R.id.tvGehalt);
 		String strTiter = ActivityTools.fktDoubleToStringFormat(dblTiter, 4);
-		tv.setText("Ø Titer = " + strTiter);
+		tv.setText("Ã˜ Titer = " + strTiter);
 	
 		// Berechnung der Relativen Standardabweichung
 

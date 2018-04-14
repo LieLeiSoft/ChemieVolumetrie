@@ -16,13 +16,13 @@ public class EinstellungenActivity extends Activity {
         super.onCreate(savedInstanceState);
      	setContentView(R.layout.einstellungen);	     
   
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
      	
  				
     } // onCreate
 
-    /** wird ausgeführt, wenn Activicty angezeigt wird */
+    /** wird ausgefÃ¼hrt, wenn Activicty angezeigt wird */
     @Override
     public void onResume() {
     	super.onResume();
@@ -183,7 +183,7 @@ public class EinstellungenActivity extends Activity {
     	
     } // onResume
     
-	/** wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird */
+	/** wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird */
 	@Override
 	public void onPause() {
 		super.onPause();

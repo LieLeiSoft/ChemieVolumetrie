@@ -86,7 +86,7 @@ public class clsErstelle_Liste_Stoff {
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "87.54";
 			arrStoff[intZeileNr][1] = "N 6,25";
-            arrStoff[intZeileNr][3] = "Eiweiﬂ";
+            arrStoff[intZeileNr][3] = "Eiwei√ü";
 
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "89.22";
@@ -203,7 +203,7 @@ public class clsErstelle_Liste_Stoff {
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "75.044";
 			arrStoff[intZeileNr][1] = "C4H6O6";
-            arrStoff[intZeileNr][3] = "Weins‰ure";
+            arrStoff[intZeileNr][3] = "Weins√§ure";
 
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "188.18";
@@ -270,7 +270,7 @@ public class clsErstelle_Liste_Stoff {
 			arrStoff[intZeileNr][0] = "1.347";
 			arrStoff[intZeileNr][1] = "P";
             arrStoff[intZeileNr][2] = "Phenolphthalein";
-            arrStoff[intZeileNr][3] = "¸ber Ammoniummolybdatophosphat";
+            arrStoff[intZeileNr][3] = "√ºber Ammoniummolybdatophosphat";
 
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "97.995";
@@ -687,7 +687,7 @@ public class clsErstelle_Liste_Stoff {
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "15.009";
 			arrStoff[intZeileNr][1] = "C4H6O6";
-            arrStoff[intZeileNr][3] = "Weins‰ure";
+            arrStoff[intZeileNr][3] = "Weins√§ure";
 
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "7.5066";
@@ -1196,7 +1196,7 @@ public class clsErstelle_Liste_Stoff {
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "55.847";
 			arrStoff[intZeileNr][1] = "Fe(II)";
-			arrStoff[intZeileNr][2] = "Sulfosalicyls‰ure (Variaminblau B)";
+			arrStoff[intZeileNr][2] = "Sulfosalicyls√§ure (Variaminblau B)";
 
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "55.85";
@@ -1301,7 +1301,7 @@ public class clsErstelle_Liste_Stoff {
 			arrStoff[intZeileNr][0] = "43.468";
 			arrStoff[intZeileNr][1] = "MnO2";
 			arrStoff[intZeileNr][2] = "Murexid";
-            arrStoff[intZeileNr][3] = "mit Oxals‰ure oder Eisen(II)-sulfat";
+            arrStoff[intZeileNr][3] = "mit Oxals√§ure oder Eisen(II)-sulfat";
 
 			intZeileNr++;
 			arrStoff[intZeileNr][0] = "33.882";

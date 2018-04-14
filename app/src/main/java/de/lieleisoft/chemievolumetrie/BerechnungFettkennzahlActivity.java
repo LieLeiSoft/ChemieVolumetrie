@@ -22,7 +22,7 @@ public class BerechnungFettkennzahlActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.berechnungtiter);
 
-		// Activity registrieren, damit sie sp‰ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie sp√§ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 	} // onCreate
 	
@@ -81,7 +81,7 @@ public class BerechnungFettkennzahlActivity extends Activity {
 	    }
 
    		//***********************************************************************
-   		//********* Auslesen der Verbr‰uche *************************************
+   		//********* Auslesen der Verbr√§uche *************************************
    		//***********************************************************************
    		
 	    for (int x=1; x<=8; x++)
@@ -100,14 +100,14 @@ public class BerechnungFettkennzahlActivity extends Activity {
 
 		
    		//***********************************************************************
-   		//**************** Auslesen der S‰urezahl *******************************
+   		//**************** Auslesen der S√§urezahl *******************************
    		//***********************************************************************
 		
 		strSZ = prefs.getString("Saeurezahl", "0");
 		dblSZ = Double.parseDouble(strSZ);
 		
    		//***********************************************************************
-   		//******************* Auslesen Free Acid f¸r OHZ USP ********************
+   		//******************* Auslesen Free Acid f√ºr OHZ USP ********************
    		//***********************************************************************
 		
 		strFreeAcid = prefs.getString("FreeAcid", "0");
@@ -166,12 +166,12 @@ public class BerechnungFettkennzahlActivity extends Activity {
 		// ***********************************************************************
 				
 				switch (intRoutineID) {	
-				case 41: // ******** S‰urezahl EP ********
+				case 41: // ******** S√§urezahl EP ********
 					arrFettkennzahl[x] = (5.610 * arrVerbrauch[x] * dblTiter) / arrEinwaage[x]; 
 					tv.setText(R.string.SZEP);
 					strFettkennzahl = tv.getText().toString();
 					break;
-				case 42: // ******** S‰urezahl USP ********			
+				case 42: // ******** S√§urezahl USP ********			
 					arrFettkennzahl[x] = (56.11 * arrVerbrauch[x] * dblTiter * 0.1) / arrEinwaage[x]; 
 					tv.setText(R.string.SZUSP);
 					strFettkennzahl = tv.getText().toString();
@@ -253,7 +253,7 @@ public class BerechnungFettkennzahlActivity extends Activity {
 			} // else if (arrEinwaage[x] == 0)
 	    } // for (int x=1; x<=8; x++)
 		
-		// ÿ Fettkennzahl errechnen
+		// √ò Fettkennzahl errechnen
 		
 		dblFettkennzahl = dblFettkennzahl / intAnzahl;			
 		dblSpeicher = dblFettkennzahl;
@@ -266,10 +266,10 @@ public class BerechnungFettkennzahlActivity extends Activity {
 			prefEditor.apply();
 		}
 		
-		// Anzeige ÿ Fettkennzahl
+		// Anzeige √ò Fettkennzahl
 		tv = (TextView) findViewById(R.id.tvGehalt);
 		String strFettkennzahlwert = ActivityTools.fktDoubleToStringFormat(dblFettkennzahl, AnzahlStellen);
-		tv.setText("ÿ " + strFettkennzahl + " = " + strFettkennzahlwert);
+		tv.setText("√ò " + strFettkennzahl + " = " + strFettkennzahlwert);
 	
 		// Berechnung der Relativen Standardabweichung
 

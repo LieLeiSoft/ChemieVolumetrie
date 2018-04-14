@@ -21,16 +21,16 @@ public class FettkennzahlenActivity extends Activity {
         super.onCreate(savedInstanceState);
      	setContentView(R.layout.fettkennzahlen);	
      	
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
     }
     
-    /** wird ausgeführt, wenn Activicty angezeigt wird */
+    /** wird ausgefÃ¼hrt, wenn Activicty angezeigt wird */
 	@Override
 	public void onResume() {
 		super.onResume();
 		
-		// bestimmte Einträge aus Konfigurationsdatei ("Preferences") entfernen
+		// bestimmte EintrÃ¤ge aus Konfigurationsdatei ("Preferences") entfernen
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 		
    		String strTextSize = prefs.getString("TG_Fettkennzahlen", "12");
@@ -44,7 +44,7 @@ public class FettkennzahlenActivity extends Activity {
 	    	int resId = getResources().getIdentifier("button"+x, "id", getPackageName());
 	        TextView tv = (TextView) findViewById(resId);
 	        
-	        // Höhe der Textview wird über Layout-Parameter eingestellt, weil "tv.setHeight(intButtonhoehe);" scheinbar ab Android 5 NICHT mehr funktioniert :-( 
+	        // HÃ¶he der Textview wird Ã¼ber Layout-Parameter eingestellt, weil "tv.setHeight(intButtonhoehe);" scheinbar ab Android 5 NICHT mehr funktioniert :-( 
 	        LayoutParams params = (LayoutParams) tv.getLayoutParams();
 	        params.height = intButtonhoehe;
 	        tv.setLayoutParams(params);	        
@@ -65,7 +65,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -83,7 +83,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -101,7 +101,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -119,7 +119,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), AcidValueActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -137,7 +137,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), AcidValueActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -155,7 +155,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -173,7 +173,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -191,7 +191,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -209,7 +209,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -227,7 +227,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -245,7 +245,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -263,7 +263,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -281,7 +281,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -299,7 +299,7 @@ public class FettkennzahlenActivity extends Activity {
     	
     	Intent myIntent = new Intent(v.getContext(), EinwaageActivity.class);
                    
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
