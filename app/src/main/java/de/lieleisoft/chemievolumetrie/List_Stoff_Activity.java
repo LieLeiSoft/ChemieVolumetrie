@@ -27,7 +27,7 @@ public class List_Stoff_Activity extends Activity {
 	int intZeileNr_max = 0;
 
 	/*************************************************************
-	 ** onCreate wird ausgeführt, wenn Activicty erstellt wird ***
+	 ** onCreate wird ausgefÃ¼hrt, wenn Activicty erstellt wird ***
 	 *************************************************************/
 	
 	@Override
@@ -35,7 +35,7 @@ public class List_Stoff_Activity extends Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.list_stoff); 
 	    
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 	    
 	    String strGewaehlteMassanalyse = null;
@@ -48,7 +48,7 @@ public class List_Stoff_Activity extends Activity {
 	    tv.setText(strGewaehlteMassanalyse);
 
 	    
-	    // Stoff-Tabelle wird in extra Klassen-Modul erstellt, weil sehr umfangreich (über 1.600 Zeilen Code!)
+	    // Stoff-Tabelle wird in extra Klassen-Modul erstellt, weil sehr umfangreich (Ã¼ber 1.600 Zeilen Code!)
 	    clsErstelle_Liste_Stoff.erstelle_Liste_Stoff(getBaseContext(), arrStoff);
 	    intZeileNr_max = clsErstelle_Liste_Stoff.intZeileNr_max;
 		
@@ -119,6 +119,6 @@ public class List_Stoff_Activity extends Activity {
     		strStoff = strStoff + arrStoff[zeile][1] + ", ";
 			StoffListe.add(arrStoff[zeile][1]);
   		}
-    	strStoff = strStoff.substring(0, strStoff.length()-2); // überflüssiges ", " am Ende des Strings entfernen
+    	strStoff = strStoff.substring(0, strStoff.length()-2); // Ã¼berflÃ¼ssiges ", " am Ende des Strings entfernen
     }     
 }

@@ -19,7 +19,7 @@ import de.lieleisoft.chemievolumetrie.R;
 public class MolaritaetActivity extends Activity {
 	
 	/*************************************************************
-	 ** onCreate wird ausgeführt, wenn Activicty erstellt wird ***
+	 ** onCreate wird ausgefÃ¼hrt, wenn Activicty erstellt wird ***
 	 *************************************************************/
 	
 	@Override
@@ -27,13 +27,13 @@ public class MolaritaetActivity extends Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.molaritaetbestimmung);       
     
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 		
 	} // onCreate
 
 	/***************************************************************
-	 ** onResume wird ausgeführt, wenn Activicty angezeigt wird  ***
+	 ** onResume wird ausgefÃ¼hrt, wenn Activicty angezeigt wird  ***
 	 ***************************************************************/
 	
 	@Override
@@ -61,7 +61,7 @@ public class MolaritaetActivity extends Activity {
     }
     
     // *************************************************************************************
-    // ********* Hier wird der Cursor in das nächste leere Eingabefeld gesetzt. ************
+    // ********* Hier wird der Cursor in das nÃ¤chste leere Eingabefeld gesetzt. ************
     // *************************************************************************************
    
     for (int x=5; x>=1; x--)
@@ -82,7 +82,7 @@ public class MolaritaetActivity extends Activity {
 	} // onResume
 
 	/*******************************************************************************
-	 ** onPause wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird ***
+	 ** onPause wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird ***
 	 *******************************************************************************/
 	
 	@Override
@@ -188,7 +188,7 @@ public class MolaritaetActivity extends Activity {
 	}	
 		
 	/*******************************************************************************
-	 ******************************* Button Zurück *********************************
+	 ******************************* Button ZurÃ¼ck *********************************
 	 *******************************************************************************/	
 	
 	public void btnZurueck(View v) 
@@ -196,7 +196,7 @@ public class MolaritaetActivity extends Activity {
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 		SharedPreferences.Editor prefEditor = prefs.edit(); 
 		
-		prefEditor.putInt("TiterNichtAngeben", 1); // (“Name“ und Wert) der Konfigurationsdatei
+		prefEditor.putInt("TiterNichtAngeben", 1); // (Â“NameÂ“ und Wert) der Konfigurationsdatei
 		prefEditor.apply();
 
 		
@@ -224,7 +224,7 @@ public class MolaritaetActivity extends Activity {
 	 **** btn Clear ****
 	 *******************/
     
-    // Eingabefelder zurücksetzen
+    // Eingabefelder zurÃ¼cksetzen
     public void btnClear(View v) 
     {
     	EditText et;

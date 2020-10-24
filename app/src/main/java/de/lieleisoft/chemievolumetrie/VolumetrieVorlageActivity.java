@@ -21,18 +21,18 @@ import android.widget.Toast;
 import de.lieleisoft.chemievolumetrie.R;
 
 public class VolumetrieVorlageActivity extends Activity {
-	/** wird ausgeführt, wenn Activicty erstellt wird */
+	/** wird ausgefÃ¼hrt, wenn Activicty erstellt wird */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.volumetrie_vorlage);
 
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 	
 	} // onCreate
 
-	/** wird ausgeführt, wenn Activicty angezeigt wird */
+	/** wird ausgefÃ¼hrt, wenn Activicty angezeigt wird */
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -60,7 +60,7 @@ public class VolumetrieVorlageActivity extends Activity {
    			tv = (TextView) findViewById(R.id.Vorlage);
    			tv.setVisibility(View.GONE);
    			tv = (TextView) findViewById(R.id.tvVorlagevolumen);
-   			tv.setText("Je nach gewählter Methode\ngenaues Volumen\nder Vorlage beachten!");
+   			tv.setText("Je nach gewÃ¤hlter Methode\ngenaues Volumen\nder Vorlage beachten!");
    		}
    		else
    		{
@@ -84,7 +84,7 @@ public class VolumetrieVorlageActivity extends Activity {
    		}
 	} // onResume
 
-	/** wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird */
+	/** wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird */
 	@Override
 	public void onPause() {
 		super.onPause();
@@ -102,7 +102,7 @@ public class VolumetrieVorlageActivity extends Activity {
 
    		Eingabetext = et.getText().toString();
    		     	             
-   		prefEditor.putString("Vorlage", Eingabetext); // (“Name“ und Wert) der Konfigurationsdatei
+   		prefEditor.putString("Vorlage", Eingabetext); // (Â“NameÂ“ und Wert) der Konfigurationsdatei
    		prefEditor.apply();
 
 	    
@@ -128,7 +128,7 @@ public class VolumetrieVorlageActivity extends Activity {
 		et = (EditText) findViewById(R.id.Vorlage);  
 	    Eingabetext = et.getText().toString();
 	    
-       	if ((Eingabetext.equals("") == true) && (intRoutineID == 2)) // hier wird geprüft, ob ein Wert eingegeben wurde und Routine 2 ausgewählt wurde.
+       	if ((Eingabetext.equals("") == true) && (intRoutineID == 2)) // hier wird geprÃ¼ft, ob ein Wert eingegeben wurde und Routine 2 ausgewÃ¤hlt wurde.
        	{
        		// **************************************       		
        		// *** Hier wird ein Toast ausgegeben ***
@@ -168,8 +168,8 @@ public class VolumetrieVorlageActivity extends Activity {
 		//AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		AlertDialog.Builder builder = new AlertDialog.Builder(VolumetrieVorlageActivity.this);
 		builder.setTitle("Direkte oder \nInverse Titration?");
-		builder.setMessage("Bei der direkten Titration wird die zu prüfende Lösung vorgelegt und mit der bekannten Maßlösung direkt titriert (Normalzustand). "
-				+ "Bei der inversen Titration wird hingegen eine abgemessene Menge an Maßlösung mit der zu prüfenden Lösung titriert.");
+		builder.setMessage("Bei der direkten Titration wird die zu prÃ¼fende LÃ¶sung vorgelegt und mit der bekannten MaÃŸlÃ¶sung direkt titriert (Normalzustand). "
+				+ "Bei der inversen Titration wird hingegen eine abgemessene Menge an MaÃŸlÃ¶sung mit der zu prÃ¼fenden LÃ¶sung titriert.");
 		
 		builder.setPositiveButton
 			("Direkte Titration",
@@ -225,10 +225,10 @@ public class VolumetrieVorlageActivity extends Activity {
 			// aufzurufende Activity ("BerechnungActivity") einrichten
 			Intent myIntent = new Intent(this, HilfeActivity.class);
 			
-	        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+	        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 	        myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 	
-	        // als Parameter wird der Name des anzuzeigenen Hilfe-Kapitels übergeben
+	        // als Parameter wird der Name des anzuzeigenen Hilfe-Kapitels Ã¼bergeben
 	        myIntent.putExtra("Kapitel", "Vorlage");
 
 			// Activity aufrufen
@@ -238,7 +238,7 @@ public class VolumetrieVorlageActivity extends Activity {
 	
 	public void btnClear(View v) {	
 			
-        // Eingabefelder zurücksetzen
+        // Eingabefelder zurÃ¼cksetzen
  
 			EditText et;
 			et = (EditText) findViewById(R.id.Vorlage);

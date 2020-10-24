@@ -20,7 +20,7 @@ import de.lieleisoft.chemievolumetrie.R;
 public class Konz_Masslsg_Activity extends Activity {
 	
 	/*************************************************************
-	 ** onCreate wird ausgeführt, wenn Activicty erstellt wird ***
+	 ** onCreate wird ausgefÃ¼hrt, wenn Activicty erstellt wird ***
 	 *************************************************************/
 	
 	@Override
@@ -45,19 +45,19 @@ public class Konz_Masslsg_Activity extends Activity {
 	    tv = (TextView) findViewById(R.id.btnMassLsgVorlage);
 	    tv.setVisibility(View.GONE);
 	    tv = (TextView) findViewById(R.id.Masslsg_bekannter_Titer);
-	    tv.setText("Normalität der Maßlösung");
+	    tv.setText("NormalitÃ¤t der MaÃŸlÃ¶sung");
 	    tv = (TextView) findViewById(R.id.btnMassLsgTitrant);
 	    tv.setVisibility(View.GONE);
 	    tv = (TextView) findViewById(R.id.Eingabe_3);
 	    tv.setVisibility(View.GONE);
 
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 		
 	} // onCreate
 
 	/***************************************************************
-	 ** onResume wird ausgeführt, wenn Activicty angezeigt wird  ***
+	 ** onResume wird ausgefÃ¼hrt, wenn Activicty angezeigt wird  ***
 	 ***************************************************************/
 	
 	@Override
@@ -69,7 +69,7 @@ public class Konz_Masslsg_Activity extends Activity {
 
 	
     // ************************************************************************************
-    // ********* Die Normalität der Masslösung wird angezeigt (falls vorhanden) ***********
+    // ********* Die NormalitÃ¤t der MasslÃ¶sung wird angezeigt (falls vorhanden) ***********
     // ************************************************************************************
    	
 	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -87,7 +87,7 @@ public class Konz_Masslsg_Activity extends Activity {
 	} // onResume
 
 	/*******************************************************************************
-	 ** onPause wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird ***
+	 ** onPause wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird ***
 	 *******************************************************************************/
 	
 	@Override
@@ -95,7 +95,7 @@ public class Konz_Masslsg_Activity extends Activity {
 		super.onPause();
 		
 	// ******************************************************************************************************
-	// ********* Die Normalität der Masslösung wird ausgelesen und gespeichert (falls vorhanden *************
+	// ********* Die NormalitÃ¤t der MasslÃ¶sung wird ausgelesen und gespeichert (falls vorhanden *************
 	// ******************************************************************************************************
 	
 	EditText et;
@@ -109,7 +109,7 @@ public class Konz_Masslsg_Activity extends Activity {
 	
     if (strNormalitaet.equals("") == false)
     {  	
-    	prefEditor.putString("Eingabe_4", strNormalitaet); // (“Name“ und “Wertname“)
+    	prefEditor.putString("Eingabe_4", strNormalitaet); // (Â“NameÂ“ und Â“WertnameÂ“)
     	prefEditor.apply();
     }
 
@@ -134,7 +134,7 @@ public class Konz_Masslsg_Activity extends Activity {
     		// **************************************       		
 			// *** Hier wird ein Toast ausgegeben ***
 			// **************************************        		
-			String text = "\n   Bitte die Normalität  \n   eingeben!   \n"; 
+			String text = "\n   Bitte die NormalitÃ¤t  \n   eingeben!   \n"; 
 			Toast Meldung = Toast.makeText(this, text, Toast.LENGTH_LONG);
 			Meldung.setGravity(Gravity.TOP, 0, 0);
 			Meldung.show();
@@ -152,7 +152,7 @@ public class Konz_Masslsg_Activity extends Activity {
 	 **** btn Clear ****
 	 *******************/
     
-    // Eingabefelder zurücksetzen
+    // Eingabefelder zurÃ¼cksetzen
     public void btnClear(View v) 
     {
     	EditText et;

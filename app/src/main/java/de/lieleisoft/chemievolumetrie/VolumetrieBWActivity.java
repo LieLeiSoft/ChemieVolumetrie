@@ -17,13 +17,13 @@ import android.widget.TextView;
 import de.lieleisoft.chemievolumetrie.R;
 
 public class VolumetrieBWActivity extends Activity implements OnFocusChangeListener{
-	/** wird ausgeführt, wenn Activicty erstellt wird */
+	/** wird ausgefÃ¼hrt, wenn Activicty erstellt wird */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.volumetriebw);
 
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 	    
 	    EditText et;
@@ -37,7 +37,7 @@ public class VolumetrieBWActivity extends Activity implements OnFocusChangeListe
     	}  
 	} // onCreate
 
-	/** wird ausgeführt, wenn Activicty angezeigt wird */
+	/** wird ausgefÃ¼hrt, wenn Activicty angezeigt wird */
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -71,7 +71,7 @@ public class VolumetrieBWActivity extends Activity implements OnFocusChangeListe
 		
 	} // onResume
 
-	/** wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird */
+	/** wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird */
 	@Override
 	public void onPause() {
 		super.onPause();
@@ -168,7 +168,7 @@ public class VolumetrieBWActivity extends Activity implements OnFocusChangeListe
 	public void btnClear(View v) {	
 		EditText V;
 		
-        // Eingabefelder zurücksetzen
+        // Eingabefelder zurÃ¼cksetzen
 		for (int x=1; x<=8; x++)
 		{  
 	    	int resId = getResources().getIdentifier("BW_"+(x), "id", getPackageName());
@@ -183,7 +183,7 @@ public class VolumetrieBWActivity extends Activity implements OnFocusChangeListe
 		InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		imm.showSoftInput(V, InputMethodManager.SHOW_FORCED);
 		
-		// vorerst nicht benötigte Eingabefelder wieder ausblenden
+		// vorerst nicht benÃ¶tigte Eingabefelder wieder ausblenden
 		EditText et;
 		TextView tv;
     	for (int intFeldNr=3; intFeldNr<=8; intFeldNr++)

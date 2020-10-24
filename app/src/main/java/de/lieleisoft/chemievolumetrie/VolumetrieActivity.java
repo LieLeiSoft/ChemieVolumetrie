@@ -24,7 +24,7 @@ import de.lieleisoft.chemievolumetrie.R;
 public class VolumetrieActivity extends Activity implements OnFocusChangeListener{
 
 	/*************************************************************
-	 ** onCreate wird ausgeführt, wenn Activicty erstellt wird ***
+	 ** onCreate wird ausgefÃ¼hrt, wenn Activicty erstellt wird ***
 	 *************************************************************/
 	
 	@Override
@@ -32,7 +32,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.volumetrie);
 	    
-    	// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+    	// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 	    
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -56,13 +56,13 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
    				et.setOnFocusChangeListener(this);
    			}
    		}
-   		if(intRoutineID == 1 || intRoutineID == 2 || intRoutineID >= 4)    // Button Vorlage wird bei allen Routinen außer Gehalt ausgeblendet
+   		if(intRoutineID == 1 || intRoutineID == 2 || intRoutineID >= 4)    // Button Vorlage wird bei allen Routinen auÃŸer Gehalt ausgeblendet
    		{
         	tv = (TextView) findViewById(R.id.btnVorlage);
         	tv.setVisibility(View.INVISIBLE);
    		}
 	    
-   		if(intRoutineID == 41 || intRoutineID == 42) // Button Blindwert wird bei den Routinen Säurezahl EP/USP gelöscht
+   		if(intRoutineID == 41 || intRoutineID == 42) // Button Blindwert wird bei den Routinen SÃ¤urezahl EP/USP gelÃ¶scht
    		{
         	tv = (TextView) findViewById(R.id.btnVorlage);
         	tv.setVisibility(View.GONE);
@@ -73,7 +73,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 
 	
 	/***************************************************************
-	 ** onResume wird ausgeführt, wenn Activicty angezeigt wird  ***
+	 ** onResume wird ausgefÃ¼hrt, wenn Activicty angezeigt wird  ***
 	 ***************************************************************/
 	
 	@Override
@@ -99,7 +99,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
     	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());		
 	    
     	//****************************************************************************************
-    	//********************* Auswahl Ausgabetext für Titrationsart ****************************
+    	//********************* Auswahl Ausgabetext fÃ¼r Titrationsart ****************************
     	//****************************************************************************************
     	
     	strDirekteT = prefs.getString("DirekteT", "ja"); 
@@ -121,7 +121,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
     	
     	
     	//****************************************************************************************
-    	//********************* Auswahl Ausgabetext für Vorlage **********************************
+    	//********************* Auswahl Ausgabetext fÃ¼r Vorlage **********************************
     	//****************************************************************************************
     	
     	strVorlage = prefs.getString("Vorlage", ""); 
@@ -146,7 +146,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 
     	
     	//****************************************************************************************
-    	//********************* Auswahl Ausgabetext für Blindwert ********************************
+    	//********************* Auswahl Ausgabetext fÃ¼r Blindwert ********************************
     	//****************************************************************************************
     	
     	for (int x=1; x<=8; x++)
@@ -154,7 +154,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 	    	strBW = prefs.getString("BW_"+x, "null");
 	    	if (strBW.equals("null") == false)
 	    	{
-	    		intAnzahl = intAnzahl +1;	// Auch bei einer strBW = "0" zählt er +1
+	    		intAnzahl = intAnzahl +1;	// Auch bei einer strBW = "0" zÃ¤hlt er +1
 	    		arrBW[x] = Double.parseDouble(strBW);
 	    		dblDBW = dblDBW + arrBW[x];
 	    	}
@@ -167,12 +167,12 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
     	{
     		Eingabetext = " ohne Blindwerte";
     		strBW = "0";	// hier wird der strBW wieder auf "0" gesetzt, wenn kein BW gesetzt
-    						// wichtig für die Berechnung, sonst ist strBW = NaN und der Gehalt= 0!
+    						// wichtig fÃ¼r die Berechnung, sonst ist strBW = NaN und der Gehalt= 0!
     	}
     	    	
     	else
     	{
-    		Eingabetext = " Ø BW= " + ActivityTools.fktDoubleToStringFormat(dblDBW, 3) + "ml";	
+    		Eingabetext = " Ã˜ BW= " + ActivityTools.fktDoubleToStringFormat(dblDBW, 3) + "ml";	
     	}
     	
     	SharedPreferences.Editor prefEditor = prefs.edit();
@@ -189,7 +189,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
     	tv.setText(Eingabetext);
     	
     	// ***************************************************
-    	// *** Hier werden die Probenverbräuche ausgelesen ***
+    	// *** Hier werden die ProbenverbrÃ¤uche ausgelesen ***
     	// *** und auf dem Display angezeigt.              ***
     	// ***************************************************
     	
@@ -251,7 +251,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 	
 	
 	/*******************************************************************************
-	 ** onPause wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird ***
+	 ** onPause wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird ***
 	 *******************************************************************************/
 	
 	@Override
@@ -313,7 +313,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 		String Eingabetext;
 		
 		// *****************************************************
-		// *** Hier wird geprüft, ob in dem ersten Verbrauch ***
+		// *** Hier wird geprÃ¼ft, ob in dem ersten Verbrauch ***
 		// *** Eingabefeld (Verbrauch 1) ein Wert steht.     ***
 		// *****************************************************
     	
@@ -372,8 +372,8 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 			{		
 				//AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				AlertDialog.Builder builder = new AlertDialog.Builder(VolumetrieActivity.this);
-				builder.setTitle("Ist dies eine Rücktitration ?");
-				builder.setMessage("Bei einigen Proben ist der Verbrauch kleiner, als der Ø Verbrauch vom Blindwert bzw. das Volumen der Vorlage. Sollen die Proben vom Ø Blindwert bzw. Vorlagevolumen abgezogen werden?");
+				builder.setTitle("Ist dies eine RÃ¼cktitration ?");
+				builder.setMessage("Bei einigen Proben ist der Verbrauch kleiner, als der Ã˜ Verbrauch vom Blindwert bzw. das Volumen der Vorlage. Sollen die Proben vom Ã˜ Blindwert bzw. Vorlagevolumen abgezogen werden?");
 				builder.setPositiveButton("Ja",
 						new DialogInterface.OnClickListener()
 							{
@@ -381,7 +381,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 								{
 						    		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());		
 									SharedPreferences.Editor prefEditor = prefs.edit();
-									prefEditor.putString("Rücktitration", "ja"); 
+									prefEditor.putString("RÃ¼cktitration", "ja"); 
 									prefEditor.apply();
 									
 									if (intRoutineID == 3)
@@ -389,7 +389,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 										// aufzurufende Activity ("BerechnungActivity") einrichten
 										Intent myIntent = new Intent(VolumetrieActivity.this, BerechnungActivity.class);
 									
-										// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+										// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 										myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 							
 										// Activity aufrufen
@@ -402,7 +402,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 										// aufzurufende Activity ("BerechnungTiterActivity") einrichten
 										Intent myIntent = new Intent(VolumetrieActivity.this, BerechnungTiterActivity.class);
 									
-										// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+										// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 										myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 							
 										// Activity aufrufen
@@ -419,7 +419,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 								{	
 						    		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());		
 									SharedPreferences.Editor prefEditor = prefs.edit();
-									prefEditor.putString("Rücktitration", "nein"); 
+									prefEditor.putString("RÃ¼cktitration", "nein"); 
 									prefEditor.apply();
 
 									
@@ -428,7 +428,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 										// aufzurufende Activity ("BerechnungActivity") einrichten
 										Intent myIntent = new Intent(VolumetrieActivity.this, BerechnungActivity.class);
 									
-										// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+										// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 										myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 							
 										// Activity aufrufen
@@ -441,7 +441,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 										// aufzurufende Activity ("BerechnungTiterActivity") einrichten
 										Intent myIntent = new Intent(VolumetrieActivity.this, BerechnungTiterActivity.class);
 									
-										// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+										// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 										myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 							
 										// Activity aufrufen
@@ -456,7 +456,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 			}
 			else
 			{
-				prefEditor.putString("Rücktitration", "nein"); 
+				prefEditor.putString("RÃ¼cktitration", "nein"); 
 				prefEditor.apply();
 				
 				if (intRoutineID == 3)
@@ -464,7 +464,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 					// aufzurufende Activity ("BerechnungActivity") einrichten
 					Intent myIntent = new Intent(VolumetrieActivity.this, BerechnungActivity.class);
 				
-					// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+					// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 					myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 		
 					// Activity aufrufen
@@ -477,7 +477,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 						// aufzurufende Activity ("BerechnungFettkennzahlActivity") einrichten
 						Intent myIntent = new Intent(VolumetrieActivity.this, BerechnungFettkennzahlActivity.class);
 					
-						// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+						// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 						myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 			
 						// Activity aufrufen
@@ -488,7 +488,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 						// aufzurufende Activity ("BerechnungTiterActivity") einrichten
 						Intent myIntent = new Intent(VolumetrieActivity.this, BerechnungTiterActivity.class);
 					
-						// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+						// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 						myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 			
 						// Activity aufrufen
@@ -508,7 +508,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 		// aufzurufende Activity ("BerechnungActivity") einrichten
 		Intent myIntent = new Intent(this, VolumetrieBWActivity.class);
 		
-        // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+        // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
         myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -527,7 +527,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
    		// aufzurufende Activity ("BerechnungActivity") einrichten
    		Intent myIntent = new Intent(this, VolumetrieVorlageActivity.class);
    			
-   	    // verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+   	    // verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
    	    myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
    	    // Activity aufrufen
@@ -538,13 +538,13 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 	
 	
 	// ******************************************
-	// *** Alle Eingabefelder werden gelöscht ***
+	// *** Alle Eingabefelder werden gelÃ¶scht ***
 	// ******************************************
 	
 	public void btnClear(View v) {	
 		EditText V;
 		
-        // Eingabefelder zurücksetzen
+        // Eingabefelder zurÃ¼cksetzen
 		for (int x=1; x<=8; x++)
 		{  
 	    	int resId = getResources().getIdentifier("Verbrauch_"+x, "id", getPackageName());
@@ -558,7 +558,7 @@ public class VolumetrieActivity extends Activity implements OnFocusChangeListene
 		InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		imm.showSoftInput(V, InputMethodManager.SHOW_FORCED);
 		/*
-		// vorerst nicht benötigte Eingabefelder wieder ausblenden
+		// vorerst nicht benÃ¶tigte Eingabefelder wieder ausblenden
 		EditText et;
     	for (int intFeldNr=3; intFeldNr<=8; intFeldNr++)
     	{

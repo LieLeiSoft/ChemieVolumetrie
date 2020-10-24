@@ -20,7 +20,7 @@ import de.lieleisoft.chemievolumetrie.R;
 public class TiterEingabenActivity extends Activity {
 	
 	/*************************************************************
-	 ** onCreate wird ausgeführt, wenn Activicty erstellt wird ***
+	 ** onCreate wird ausgefÃ¼hrt, wenn Activicty erstellt wird ***
 	 *************************************************************/
 	
 	@Override
@@ -28,7 +28,7 @@ public class TiterEingabenActivity extends Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.titereingaben);       
     
-		// Activity registrieren, damit sie später an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie spÃ¤ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 
 	    // Cursor in erstes Eingabefeld setzen 
@@ -39,7 +39,7 @@ public class TiterEingabenActivity extends Activity {
 	} // onCreate
 
 	/***************************************************************
-	 ** onResume wird ausgeführt, wenn Activicty angezeigt wird  ***
+	 ** onResume wird ausgefÃ¼hrt, wenn Activicty angezeigt wird  ***
 	 ***************************************************************/
 	
 	@Override
@@ -66,7 +66,7 @@ public class TiterEingabenActivity extends Activity {
    		intTiterNichtAngeben = prefs.getInt("TiterNichtAngeben", 0);
    		
    		strDirekteT = prefs.getString("DirekteT", "ja");
-   		strTiter = prefs.getString("TiterFürGehalt", "");
+   		strTiter = prefs.getString("TiterFÃ¼rGehalt", "");
    		
 	    for (int x=1; x<=4; x++)
 	    {
@@ -140,7 +140,7 @@ public class TiterEingabenActivity extends Activity {
         	tv.setVisibility(View.GONE);
     	}
     	
-    	if (intRoutineID == 2)	// Titerbestimmung mit Maßlösung
+    	if (intRoutineID == 2)	// Titerbestimmung mit MaÃŸlÃ¶sung
     	{	
             tv = (TextView) findViewById(R.id.Faktor);
             tv.setVisibility(View.GONE);
@@ -287,7 +287,7 @@ public class TiterEingabenActivity extends Activity {
 	} // onResume
 
 	/*******************************************************************************
-	 ** onPause wird ausgeführt, wenn zu einer anderen Activicty gewechselt wird ***
+	 ** onPause wird ausgefÃ¼hrt, wenn zu einer anderen Activicty gewechselt wird ***
 	 *******************************************************************************/
 	
 	@Override
@@ -320,7 +320,7 @@ public class TiterEingabenActivity extends Activity {
 		// aufzurufende Activity ("BerechnungActivity") einrichten
 		Intent myIntent = new Intent(this, List_Masslsg_Activity.class);
 
-		// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+		// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 		myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -332,7 +332,7 @@ public class TiterEingabenActivity extends Activity {
 		// aufzurufende Activity ("BerechnungActivity") einrichten
 		Intent myIntent = new Intent(this, MolaritaetActivity.class);
 
-		// verhindern, dass die Activity ein weiteres Mal geöffnet wird, wenn sie bereits geöffnet wurde
+		// verhindern, dass die Activity ein weiteres Mal geÃ¶ffnet wird, wenn sie bereits geÃ¶ffnet wurde
 		myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
 		// Activity aufrufen
@@ -413,7 +413,7 @@ public class TiterEingabenActivity extends Activity {
            			// **************************************       		
            			// *** Hier wird ein Toast ausgegeben ***
            			// **************************************        		
-           			String text = "\n   Bitte noch die Stoffmengenkonzentration der zu   \n   bestimmenden Maßlösung eingeben!   \n"; 
+           			String text = "\n   Bitte noch die Stoffmengenkonzentration der zu   \n   bestimmenden MaÃŸlÃ¶sung eingeben!   \n"; 
            			Toast Meldung = Toast.makeText(this, text, Toast.LENGTH_LONG);
            			Meldung.setGravity(Gravity.TOP, 0, 0);
            			Meldung.show();
@@ -426,7 +426,7 @@ public class TiterEingabenActivity extends Activity {
        					// **************************************       		
        					// *** Hier wird ein Toast ausgegeben ***
        					// **************************************        		
-       					String text = "\n   Bitte noch die Stoffmengenkonzentration der   \n   bekannten Maßlösung eingeben!   \n"; 
+       					String text = "\n   Bitte noch die Stoffmengenkonzentration der   \n   bekannten MaÃŸlÃ¶sung eingeben!   \n"; 
        					Toast Meldung = Toast.makeText(this, text, Toast.LENGTH_LONG);
        					Meldung.setGravity(Gravity.TOP, 0, 0);
        					Meldung.show();
@@ -443,7 +443,7 @@ public class TiterEingabenActivity extends Activity {
                				// **************************************       		
                				// *** Hier wird ein Toast ausgegeben ***
                				// **************************************        		
-               				String text = "\n   Der Titer der bekannten Maßlösung   \n   wurde auf 1.0000 gesetzt!   \n"; 
+               				String text = "\n   Der Titer der bekannten MaÃŸlÃ¶sung   \n   wurde auf 1.0000 gesetzt!   \n"; 
                				Toast Meldung = Toast.makeText(this, text, Toast.LENGTH_LONG);
                				Meldung.setGravity(Gravity.TOP, 0, 0);
                				Meldung.show();
@@ -470,7 +470,7 @@ public class TiterEingabenActivity extends Activity {
                	// **************************************       		
                	// *** Hier wird ein Toast ausgegeben ***
                	// **************************************        		
-               	String text = "\n   Bitte noch den volumetrischen Faktor   \n   der Maßlösung eingeben!   \n"; 
+               	String text = "\n   Bitte noch den volumetrischen Faktor   \n   der MaÃŸlÃ¶sung eingeben!   \n"; 
                	Toast Meldung = Toast.makeText(this, text, Toast.LENGTH_LONG);
                	Meldung.setGravity(Gravity.TOP, 0, 0);
                	Meldung.show();
@@ -487,7 +487,7 @@ public class TiterEingabenActivity extends Activity {
        				// **************************************       		
        				// *** Hier wird ein Toast ausgegeben ***
        				// **************************************        		
-       				String text = "\n   Der Titer der bekannten Maßlösung   \n   wurde auf 1.0000 gesetzt!   \n"; 
+       				String text = "\n   Der Titer der bekannten MaÃŸlÃ¶sung   \n   wurde auf 1.0000 gesetzt!   \n"; 
        				Toast Meldung = Toast.makeText(this, text, Toast.LENGTH_LONG);
        				Meldung.setGravity(Gravity.TOP, 0, 0);
        				Meldung.show();
@@ -517,12 +517,12 @@ public class TiterEingabenActivity extends Activity {
        			// **************************************       		
        			// *** Hier wird ein Toast ausgegeben ***
        			// **************************************        		
-       			String text = "\n   Der Titer der bekannten Maßlösung   \n   wurde auf 1.0000 gesetzt!   \n"; 
+       			String text = "\n   Der Titer der bekannten MaÃŸlÃ¶sung   \n   wurde auf 1.0000 gesetzt!   \n"; 
        			Toast Meldung = Toast.makeText(this, text, Toast.LENGTH_LONG);
        			Meldung.setGravity(Gravity.TOP, 0, 0);
        			Meldung.show();
 
-   				if(intRoutineID == 41 || intRoutineID == 42) // Bei Säurezahl EP/USP kein BW
+   				if(intRoutineID == 41 || intRoutineID == 42) // Bei SÃ¤urezahl EP/USP kein BW
    				{
    					Intent myIntent = new Intent(this, VolumetrieActivity.class);
    					myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
@@ -537,7 +537,7 @@ public class TiterEingabenActivity extends Activity {
        		}
        		else
        		{
-   				if(intRoutineID == 41 || intRoutineID == 42) // Bei Säurezahl EP/USP kein BW
+   				if(intRoutineID == 41 || intRoutineID == 42) // Bei SÃ¤urezahl EP/USP kein BW
    				{
    					Intent myIntent = new Intent(this, VolumetrieActivity.class);
    					myIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
@@ -554,7 +554,7 @@ public class TiterEingabenActivity extends Activity {
     } // btnWeiter
 	
 
-    // Eingabefelder zurücksetzen
+    // Eingabefelder zurÃ¼cksetzen
     public void btnClear(View v) {
     	
    		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());		

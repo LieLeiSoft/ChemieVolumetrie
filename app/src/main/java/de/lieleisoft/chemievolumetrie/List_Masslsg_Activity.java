@@ -22,26 +22,26 @@ public class List_Masslsg_Activity extends Activity {
 	int intZeileNr_max = 0;
 
 	// 2 Spalten pro Eintrag:
-	// Spalte 0: Bezeichnung der Maﬂanalyse
-	// Spalte 1: Maﬂlˆsung
+	// Spalte 0: Bezeichnung der Ma√üanalyse
+	// Spalte 1: Ma√ül√∂sung
 
 	private void erstelle_Liste_Massanalyse() {		
 		int intZeileNr = 0;
 
 		arrMassanalyse[intZeileNr][0] = "Acidimetrie";
-		arrMassanalyse[intZeileNr][1] = "Salzs‰ure";
+		arrMassanalyse[intZeileNr][1] = "Salzs√§ure";
 
 		intZeileNr++;
 		arrMassanalyse[intZeileNr][0] = "Acidimetrie";
-		arrMassanalyse[intZeileNr][1] = "Salpeters‰ure";
+		arrMassanalyse[intZeileNr][1] = "Salpeters√§ure";
 
 		intZeileNr++;
 		arrMassanalyse[intZeileNr][0] = "Acidimetrie";
-		arrMassanalyse[intZeileNr][1] = "Schwefels‰ure";
+		arrMassanalyse[intZeileNr][1] = "Schwefels√§ure";
 		
 		intZeileNr++;
 		arrMassanalyse[intZeileNr][0] = "Acidimetrie";
-		arrMassanalyse[intZeileNr][1] = "Essigs‰ure";
+		arrMassanalyse[intZeileNr][1] = "Essigs√§ure";
 
 		intZeileNr++;
 		arrMassanalyse[intZeileNr][0] = "Alkalimetrie";
@@ -111,7 +111,7 @@ public class List_Masslsg_Activity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list_masslsg);
 
-		// Activity registrieren, damit sie sp‰ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie sp√§ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);
 		
     	erstelle_Liste_Massanalyse();
@@ -172,6 +172,6 @@ public class List_Masslsg_Activity extends Activity {
     		strMassloesung = strMassloesung + arrMassanalyse[zeile][1] + ", ";
 			MassanalyseListe.add(arrMassanalyse[zeile][1]);
   		}
-    	strMassloesung = strMassloesung.substring(0, strMassloesung.length()-2); // ¸berfl¸ssiges ", " am Ende des Strings entfernen
+    	strMassloesung = strMassloesung.substring(0, strMassloesung.length()-2); // √ºberfl√ºssiges ", " am Ende des Strings entfernen
 	}
 } // HilfeActivity

@@ -14,7 +14,7 @@ public class ImpressumActivity extends Activity
         super.onCreate(savedInstanceState);
      	setContentView(R.layout.impressum);	  
      	
-		// Activity registrieren, damit sie sp‰ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
+		// Activity registrieren, damit sie sp√§ter an zentraler Stelle (Hauptmenue) geschlossen werden kann
 	    ActivityRegistry.register(this);     	
     }	
     
